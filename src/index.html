@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stock Price Tracker</h1>
+            <p>Check real-time stock prices and basic information</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Search for a Stock</h2>
+            <div class="search-container">
+                <input type="text" id="stock-symbol" placeholder="Enter stock symbol (e.g. IBM) - only IBM works for demo purposes" />
+                <button id="search-button">Search</button>
+            </div>
+            <div id="error-message" class="error-message"></div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="company-info">
+                <h2 id="company-name"></h2>
+                <p id="company-symbol"></p>
+            </div>
+            <div class="price-info">
+                <div class="price-card">
+                    <h3>Current Price</h3>
+                    <p id="current-price" class="price"></p>
+                </div>
+                <div class="price-card">
+                    <h3>Change</h3>
+                    <p id="price-change" class="change"></p>
+                </div>
+                <div class="price-card">
+                    <h3>Change Percent</h3>
+                    <p id="change-percent" class="change-percent"></p>
+                </div>
+            </div>
+            <div class="additional-info">
+                <div class="info-card">
+                    <h3>Open</h3>
+                    <p id="open-price"></p>
+                </div>
+                <div class="info-card">
+                    <h3>High</h3>
+                    <p id="high-price"></p>
+                </div>
+                <div class="info-card">
+                    <h3>Low</h3>
+                    <p id="low-price"></p>
+                </div>
+                <div class="info-card">
+                    <h3>Previous Close</h3>
+                    <p id="prev-close"></p>
+                </div>
+                <div class="info-card">
+                    <h3>Volume</h3>
+                    <p id="volume"></p>
+                </div>
+                <div class="info-card">
+                    <h3>Latest Trading Day</h3>
+                    <p id="trading-day"></p>
+                </div>
+            </div>
+        </section>
+
+        <div id="loading-spinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Loading stock data...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Data provided by Alpha Vantage API</p>
+        </div>
+    </footer>
+
+    <script src="app.ts"></script>
+</body>
+</html>
