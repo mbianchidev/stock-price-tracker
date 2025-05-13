@@ -2,7 +2,6 @@
   "name": "stock-price-tracker",
   "version": "1.0.0",
   "description": "A TypeScript web application that allows users to check real-time stock prices and basic information",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url ./",
@@ -16,7 +15,12 @@
   "author": "mbianchidev",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "typescript": "^5.0.4"
+    "parcel": "^2.11.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "core-js": "^3.36.0",
+    "uuid": "^9.0.1"
   }
 }
